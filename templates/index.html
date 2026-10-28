@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulse | Real-time Analytics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="bg-shape bg-shape-1"></div>
+    <div class="bg-shape bg-shape-2"></div>
+
+    <div class="dashboard">
+        <header class="header">
+            <div class="logo">
+                <i class="ph ph-pulse"></i> Pulse Analytics
+            </div>
+            <div class="header-right">
+                <div class="live-status">
+                    <span class="dot"></span> LIVE UPDATES
+                </div>
+                <div class="user-profile">
+                    <img src="https://ui-avatars.com/api/?name=Admin&background=00f2fe&color=000" alt="Admin">
+                </div>
+            </div>
+        </header>
+
+        <section class="kpi-grid">
+            <div class="kpi-card glass">
+                <div class="kpi-icon revenue"><i class="ph ph-currency-circle-dollar"></i></div>
+                <div class="kpi-info">
+                    <p>Выручка</p>
+                    <h3 id="kpi-revenue">0 ₽</h3>
+                </div>
+            </div>
+            <div class="kpi-card glass">
+                <div class="kpi-icon users"><i class="ph ph-users"></i></div>
+                <div class="kpi-info">
+                    <p>Пользователи</p>
+                    <h3 id="kpi-users">0</h3>
+                </div>
+            </div>
+            <div class="kpi-card glass">
+                <div class="kpi-icon conversion"><i class="ph ph-target"></i></div>
+                <div class="kpi-info">
+                    <p>Конверсия</p>
+                    <h3 id="kpi-conversion">0%</h3>
+                </div>
+            </div>
+            <div class="kpi-card glass">
+                <div class="kpi-icon check"><i class="ph ph-receipt"></i></div>
+                <div class="kpi-info">
+                    <p>Средний чек</p>
+                    <h3 id="kpi-avg-check">0 ₽</h3>
+                </div>
+            </div>
+        </section>
+
+        <section class="main-grid">
+            <div class="chart-container glass">
+                <div class="chart-header">
+                    <h3>Динамика выручки</h3>
+                    <span>Real-time</span>
+                </div>
+                <div class="canvas-wrapper">
+                    <canvas id="revenueChart"></canvas>
+                </div>
+            </div>
+
+            <div class="chart-container glass">
+                <div class="chart-header">
+                    <h3>Устройства</h3>
+                </div>
+                <div class="canvas-wrapper donut-wrapper">
+                    <canvas id="trafficChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section class="bottom-grid">
+            <div class="transactions-container glass">
+                <h3>Последние операции</h3>
+                <div class="transactions-list" id="transactions-list"></div>
+            </div>
+
+            <div class="system-container glass">
+                <h3>Нагрузка на сервер</h3>
+                <div class="progress-group">
+                    <div class="progress-label"><span>CPU</span> <span id="cpu-text">0%</span></div>
+                    <div class="progress-bar"><div class="progress-fill" id="cpu-bar"></div></div>
+                </div>
+                <div class="progress-group">
+                    <div class="progress-label"><span>RAM</span> <span id="ram-text">0%</span></div>
+                    <div class="progress-bar"><div class="progress-fill" id="ram-bar"></div></div>
+                </div>
+                <div class="progress-group">
+                    <div class="progress-label"><span>Storage</span> <span id="storage-text">0%</span></div>
+                    <div class="progress-bar"><div class="progress-fill" id="storage-bar"></div></div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

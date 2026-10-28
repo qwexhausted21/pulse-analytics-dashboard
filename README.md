@@ -4,7 +4,7 @@
 [![Flask](https://img.shields.io/badge/Flask-3.0-green.svg)](https://flask.palletsprojects.com/)
 [![Chart.js](https://img.shields.io/badge/Chart.js-4.0-pink.svg)](https://www.chartjs.org/)
 
-![Pulse Dashboard Demo](demo.gif)
+![Pulse Dashboard Demo](demo-v2.gif)
 
 ## 🚀 О проекте
 **Pulse** — это премиальный дашборд для аналитики в реальном времени. Проект демонстрирует работу с REST API, асинхронным JavaScript (Fetch API) и визуализацией данных с помощью Chart.js.
